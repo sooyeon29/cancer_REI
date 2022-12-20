@@ -23,10 +23,8 @@ const GlobalStyle = createGlobalStyle`
   body {
   font-family: 'SpoqaHanSansNeo-Regular';
     font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--gray-900);
-        display: block;
+ margin: 0px;
+ padding: 0px;
 
   }
   :root {
