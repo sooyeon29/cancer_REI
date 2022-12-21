@@ -1,17 +1,26 @@
 import styled from "styled-components";
 import Header from "../../components/header";
 import Layout from "../../components/layout";
+import useToggle from "../../hooks/useToggle";
 import MyCalendar from "./calendar";
 
 const Main = () => {
+  const [toggle, setToggle, clickToggle] = useToggle();
   return (
     <>
       <Layout>
-        <Header />
-        <MainImage>
-          <img alt="" src="/mainimg.png" />
-        </MainImage>
-        <MyCalendar />
+        <Header
+          toggle={toggle}
+          setToggle={setToggle}
+          clickToggle={clickToggle}
+        />
+        {toggle ? (
+          <MyCalendar />
+        ) : (
+          <MainImage>
+            <img alt="" src="/mainimg.png" />
+          </MainImage>
+        )}
       </Layout>
     </>
   );
