@@ -1,8 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { BsCalendarWeek } from "react-icons/bs";
+import useToggle from "../hooks/useToggle";
 
-const Header = () => {
+const Header = ({ toggle, setToggle, clickToggle }) => {
   const navigate = useNavigate();
+
   return (
     <MainMenu>
       <Btns>
@@ -16,6 +19,14 @@ const Header = () => {
         <img alt="" src="/logo.jpg" width={50} />
       </Link>
       <MyPage>
+        {toggle ? (
+          <button onClick={clickToggle}>달력닫기</button>
+        ) : (
+          <button onClick={clickToggle}>
+            <BsCalendarWeek />
+          </button>
+        )}
+
         <button>로그인</button>
         <button>강의 담기</button>
         <button>나의 정보</button>
