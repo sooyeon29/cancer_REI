@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Header from "../../components/header";
 import Layout from "../../components/layout";
-import Calendar from "./calendar";
+import MyCalendar from "./calendar";
 
 const Main = () => {
   return (
@@ -11,9 +11,7 @@ const Main = () => {
         <MainImage>
           <img alt="" src="/mainimg.png" />
         </MainImage>
-        <div className="fullCale">
-          <Calendar />
-        </div>
+        <MyCalendar />
       </Layout>
     </>
   );
