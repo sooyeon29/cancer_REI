@@ -49,6 +49,6 @@ const MyCalendar = () => {
 export default MyCalendar;
 
 const Calen = styled.div`
-  width: 60%;
+  width: 600px;
   margin: 30px auto;
 `;
