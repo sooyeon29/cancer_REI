@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { BsCalendarWeek } from "react-icons/bs";
 import useToggle from "../hooks/useToggle";
+import ProHead from "../pages/TecProgram/proHead";
 
 const Header = ({ toggle, setToggle, clickToggle }) => {
   const navigate = useNavigate();
@@ -9,28 +10,13 @@ const Header = ({ toggle, setToggle, clickToggle }) => {
   return (
     <MainMenu>
       <Btns>
-        <Program onClick={() => navigate("/program")}>
-          교육 과정
-          <div className="sideProgram">교육1 교육2 교육3</div>
-        </Program>
-        <LapInfo>
-          연구소 안내
-          <div className="sideLapInfo">교육1 교육2 교육3</div>
-        </LapInfo>
-        <Comments>
-          {" "}
-          교육 후기
-          <div className="sideComments">교육1 교육2 교육3</div>
-        </Comments>
-        <Community>
-          커뮤니티
-          <div className="sideCommunity">교육1 교육2 교육3</div>
-        </Community>
-        <Center>
-          협력 센터
-          <div className="sideCenter">교육1 교육2 교육3</div>
-        </Center>
+        <Program onClick={() => navigate("/program")}>교육 과정</Program>
+        <LapInfo>연구소 안내</LapInfo>
+        <Comments> 교육 후기</Comments>
+        <Community>커뮤니티</Community>
+        <Center>협력 센터</Center>
       </Btns>
+
       <Link to={"/"}>
         <img alt="" src="/logo.jpg" width={50} />
       </Link>
