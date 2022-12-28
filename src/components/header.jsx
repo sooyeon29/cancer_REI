@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { BsCalendarWeek } from "react-icons/bs";
 import useToggle from "../hooks/useToggle";
+import ProHead from "../pages/TecProgram/proHead";
 
 const Header = ({ toggle, setToggle, clickToggle }) => {
   const navigate = useNavigate();
@@ -9,12 +10,13 @@ const Header = ({ toggle, setToggle, clickToggle }) => {
   return (
     <MainMenu>
       <Btns>
-        <button onClick={() => navigate("/program")}>교육 과정</button>
-        <button>연구소 안내</button>
-        <button> 교육 후기</button>
-        <button>커뮤니티</button>
-        <button>협력 센터</button>
+        <Program onClick={() => navigate("/program")}>교육 과정</Program>
+        <LapInfo>연구소 안내</LapInfo>
+        <Comments> 교육 후기</Comments>
+        <Community>커뮤니티</Community>
+        <Center>협력 센터</Center>
       </Btns>
+
       <Link to={"/"}>
         <img alt="" src="/logo.jpg" width={50} />
       </Link>
@@ -57,6 +59,61 @@ const Btns = styled.div`
     cursor: pointer;
     :hover {
       font-weight: bold;
+    }
+  }
+`;
+const Program = styled.button`
+  .sideProgram {
+    visibility: hidden;
+  }
+  :hover {
+    .sideProgram {
+      margin-top: 20px;
+      visibility: visible;
+    }
+  }
+`;
+const LapInfo = styled.button`
+  .sideLapInfo {
+    visibility: hidden;
+  }
+  :hover {
+    .sideLapInfo {
+      margin-top: 20px;
+      visibility: visible;
+    }
+  }
+`;
+const Comments = styled.button`
+  .sideComments {
+    visibility: hidden;
+  }
+  :hover {
+    .sideComments {
+      margin-top: 20px;
+      visibility: visible;
+    }
+  }
+`;
+const Community = styled.button`
+  .sideCommunity {
+    visibility: hidden;
+  }
+  :hover {
+    .sideCommunity {
+      margin-top: 20px;
+      visibility: visible;
+    }
+  }
+`;
+const Center = styled.button`
+  .sideCenter {
+    visibility: hidden;
+  }
+  :hover {
+    .sideCenter {
+      margin-top: 20px;
+      visibility: visible;
     }
   }
 `;

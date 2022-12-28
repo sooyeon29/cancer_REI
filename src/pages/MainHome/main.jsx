@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Header from "../../components/header";
 import Layout from "../../components/layout";
 import useToggle from "../../hooks/useToggle";
+import ProHead from "../TecProgram/proHead";
 import MyCalendar from "./calendar";
 
 const Main = () => {
@@ -14,6 +15,7 @@ const Main = () => {
           setToggle={setToggle}
           clickToggle={clickToggle}
         />
+        <ProHead />
         <MainImage>
           <img alt="" src="/mainimg.png" />
           {toggle ? (
